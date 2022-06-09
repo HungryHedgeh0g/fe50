@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Напишите код, который:
+            Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+            Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+            При этом ноль 0 не должен заканчивать ввод, это разрешённое число.
+            Выводит сумму всех значений массива. 
+    -->
+
+    <script>
+        let mas = [];
+        let sum = 0;
+        while (true) {
+            let temp = prompt("Введите число:");
+            if ((!isFinite(temp)) || (temp === null) || temp.trim() === "")
+                break;
+            else {
+                mas.push(+temp);
+            }
+        }
+        for (let number of mas) {
+            sum += number;
+        }
+
+        if (mas.length != 0)
+            alert(`Сумма элементов массива {${mas}} равна ${sum}`);
+        else alert("Массив пуст!");
+    </script>
+
+</body>
+
+</html>
