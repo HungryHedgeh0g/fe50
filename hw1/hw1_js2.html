@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картинка</title>
+
+</head>
+
+<body>
+    <img id="pic" src="../images/1.jpg" alt="">
+
+    <script>
+
+        let picnumber = (prompt("Введите номер картинки:", "1"));
+
+        let picextension = prompt("Введите расширение файла (jpg или png):", "jpg");
+        if (picnumber <= 11 && picnumber >= 1 && (picextension == "jpg" || picextension == "png") && !picnumber.includes(".")) {
+            // switch (picextension) {
+            //     case "jpg":
+            //         pic.src = `../images/${picnumber}.jpg`;
+            //         break;
+
+            //     case "png":
+            //         if (picnumber != 11) pic.src = `../images/${picnumber}.png`;
+            //         else alert("Нет такого файла! Допустимые имена: \n\n[1..11].jpg, \n[1..10].png");
+            //         break;
+
+            //     default: alert("Нет такого файла!");
+            // }
+            if (picnumber == 11 && picextension == "png") alert("Нет такого файла! Допустимые имена: \n\n[1..11].jpg, \n[1..10].png\n\nВ квадратных скобках указан диапазон из целых чисел без точки.");
+            else pic.src = `../images/${picnumber}.${picextension}`;
+        }
+        else alert("Нет такого файла! Допустимые имена: \n\n[1..11].jpg, \n[1..10].png\n\nВ квадратных скобках указан диапазон из целых чисел без точки.");
+    </script>
+</body>
+
+</html>

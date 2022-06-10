@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2. Создайте скрипт, который попросит ввести количество блоков <div>, 
+        затем количество картинок (от 1 до 11) и затем создает блоки 
+        и размещает внутри каждого блока указанное количество картинок. 
+        Использовать циклы.  -->
+
+    <div id="id1"></div>
+
+    <script>
+        let div_count = prompt("Введите количество блоков <div>", 3);
+        let pic_count = prompt("Введите количество картинок (1-11)", 2);
+
+        if (pic_count >= 1 && pic_count <= 11 && div_count > 0) {
+            let answer = "";
+            for (i = 1; i <= div_count; i++) {
+                answer += "<div>";
+                for (j = 1; j <= pic_count; j++) {
+                    answer += `<img src="../images/${j}.jpg">`;
+                }
+                answer += "</div>";
+            }
+            id1.innerHTML = answer;
+        } else {
+            alert("Что-то пошло не так.");
+            id1.innerHTML = `<p style="text-align: center; color: red; font-size: 15vw; line-height: 40vh;">ERROR</p>`;
+
+        }
+
+    </script>
+</body>
+
+</html>

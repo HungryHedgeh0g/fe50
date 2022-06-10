@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цикл do .. while</title>
+    <title>Оператор switch .. case</title>
 </head>
 <body>
-    <div id="box"></div>
     <script>
-        // let i=10;
-        // let s="";
-        // do {
-        //     s+=i+" ";
-        //     i--;
-        // } while (i>=1);
-        // alert(s);
-        let x=1;
-        do {
-            box.innerHTML += `<img src="./images/${x}.png"> 
-                              <img src="./images/${x}.jpg"><br>`;
-            x++;
-        } while (x<=10);
+        let a = 2+2;
+        switch (a) {
+            case 3:
+                alert("Меньше");
+                break;
+            case 5:
+                alert("Больше");
+                break;
+            case 4:
+                alert("Норма");
+                break;
+            default: 
+                alert("хз");
+        }
+        // if(a==3) {
+        //     alert("Меньше");
+        // } else if (a==4) {
+        //     alert("Равно");
+        // } else if (a==5) {
+        //     alert("Больше");
+        // } else alert("хз");
     </script>
 </body>
 </html>

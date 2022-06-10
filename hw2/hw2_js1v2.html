@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Напишите код, который будет спрашивать логин (prompt). 
+        Если посетитель вводит «Админ», то спрашивать пароль, 
+        если нажал отмена (escape) – выводить «Вход отменён», 
+        если вводит что-то другое – «Пользователь не найден». 
+        Пароль проверять так: Если введён пароль «123321», 
+        то выводить «Добро пожаловать!», иначе – «Пароль неверен», 
+        при отмене – «Вход отменён». 
+    
+    Страница будет предлагать ввести логин до тех пор,
+    пока что-нибудь не будет введено (если не нажать Cancel)
+    -->
+
+    <script>
+        let userName;
+        do {
+            userName = prompt("Please enter your username:", "");
+            if (userName == "Admin") {
+                let userPassword = prompt("Please enter your password:", "");
+                if (userPassword == "123321")
+                    alert("Welcome back!");
+                else
+                    if (userPassword == null)
+                        alert("Aborted");
+                    else alert("You have entered incorrect password!");
+            }
+            else
+                if (userName == "")
+                    alert("This field cannot be empty!")
+                else
+                    if (userName == null)
+                        alert("Aborted");
+                    else alert("An error occured: user not found.");
+        } while (userName == "");
+
+    </script>
+</body>
+
+</html>

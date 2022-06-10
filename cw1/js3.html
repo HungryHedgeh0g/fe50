@@ -9,12 +9,12 @@
 </head>
 
 <body>
-    <img id="pic" src="./images/1.jpg" alt="">
+    <img id="pic" src="../images/1.jpg" alt="">
 
     <script>
         let picnumber = parseInt(prompt("Введите номер картинки:", "1"));
         if (picnumber <= 11 && picnumber >= 1)
-            pic.src = `./images/${picnumber}.jpg`;
+            pic.src = `../images/${picnumber}.jpg`;
         else alert("Такой картинки нет (1-11)!")
     </script>
 </body>

@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arrays</title>
 </head>
 
 <body>
     <script>
-        userName = "Noob";
+        let mas = []; //empty array
+        let fruits = ["apple", "orange", "lime", "banana"];
+        let mas1 = new Array(); //empty array
+        let auto = new Array("audi", "bmw", "mercedes");
 
-        function msg() {
-            let say = "Hello, "+ userName+"!";
-            alert(say);
+        console.log(fruits[1]);
+        mas[0] = "Vasia";
+        mas[3] = "Petia";
+        console.log(mas);
+
+        for(i=0; i<fruits.length; i++) {
+            console.log(fruits[i]);
         }
-
-        msg();
     </script>
 </body>
 

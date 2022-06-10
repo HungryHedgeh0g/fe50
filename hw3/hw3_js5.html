@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    C=(M!+N!)/(M+1)!
+    M и N – числа, введенные с клавиатуры.
+    M! – это факториал числа, например, 5! = 1*2*3*4*5, это равно 120.
+    Факториал должен вычисляться с помощью функции. -->
+
+    <script>
+        function factorial(number) {
+            if (!Number.isInteger(+number) || number < 0) console.log("Обнаружена ошибка. Введено дробное число, либо меньшее нуля.");
+            else if (number === 0) return 1;
+            else {
+                let fact = 1;
+                for (i = number; i >= 1; i--)
+                    fact *= i;
+                return fact;
+            }
+        }
+
+        let m = +prompt("Введите число M").trim();
+        let n = +prompt("Введите число N").trim();
+
+        let c = (factorial(m)+factorial(n))/factorial(m+1);
+
+        if(c)
+        alert(c);
+        else alert("Найдены ошибки. Нажмите F12 (или Cmd+Opt+I, если у вас Mac) \nи перейдите на вкладку Console, чтобы узнать подробности.")
+    </script>
+
+</body>
+
+</html>

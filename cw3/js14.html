@@ -8,22 +8,11 @@
 </head>
 <body>
     <script>
-        // y=2^x+1
-        let x=5, n=3;
-        y=Math.pow(2,x)+1;
-        alert(y);
-        y=2*Math.exp(x)+1;
-        alert(y);
+        let a=1.774, x=-2.7, m=5, n=1;
 
-        //z=ln(x)/x
-        z=Math.log(x)/x;
-        alert(z);
-
-        // w=x*y, when x<z^2, else w=n*x+2
-
-        if(x<(Math.pow(z,2))) alert (x*y);
-        else alert(n*x+2);
-
+        y=Math.sqrt(a+n*n*x*x)/((a+x)*m);
+        if(Math.abs(y)<1) alert(y+1);
+        else alert(Math.sin(y*y));
     </script>
 </body>
 </html>

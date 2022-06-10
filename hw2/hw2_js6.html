@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        Вывести в цикле (for или while) четные и нечетные картинки 
+        (например, 11 картинок из папки images). С помощью стилей 
+        четным картинкам задать зеленую рамку, а нечетным – синюю. 
+    -->
+    <div id="box"></div>
+    <script>
+        for (i = 1; i <= 11; i++) {
+            switch (i % 2) {
+                case 0:
+                    box.innerHTML += `<img src="../images/${i}.jpg" style="border: 3px solid green;"> `;
+                    break;
+                case 1:
+                    box.innerHTML += `<img src="../images/${i}.jpg" style="border: 3px solid blue;"> `;
+                    break;
+                default:
+                    box.innerHTML += "";
+            }
+        }
+    </script>
+
+    <!-- Microsoft Edge Tools ругается на внутренние стили, требует не использовать их.
+
+    // CSS inline styles should not be used, move styles to an external CSS file 
+
+    -->
+</body>
+
+</html>

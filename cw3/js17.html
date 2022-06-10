@@ -9,15 +9,16 @@
 </head>
 
 <body>
+    <input type="text" id="number" size="3">
+    <input type="button" id="but_calc" value="Calculate" onclick="sqr()">
     <script>
         // Return data
 
-        function sqr(a) {
-            return a * a;
+        function sqr() {
+            let n = +number.value;
+            alert(n*n);
         }
 
-        y = sqr(6);
-        alert(y);
     </script>
 </body>
 

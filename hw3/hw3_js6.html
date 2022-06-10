@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <p>
+            <label for="menuItem">Пункты меню&ensp;</label>
+            <input type="text" name="items" id="menuItem" size="50"
+                oninput="err1.style.display = 'none'; menuItem.style.outline = ''; menuItem.style.outlineOffset = ''; menuItem.style.borderRadius = '';"><span
+                id="err1" style="color:red; font-style: italic; font-size: 0.9em; display: none;">&ensp;Это поле должно
+                быть заполнено!</span>
+        </p>
+        <p>
+            <label for="textColor">Цвет текста&ensp;</label>
+            <input type="color" name="color" id="textColor" value="#ffffff">
+        </p>
+        <p>
+            <label for="backColor">Цвет фона&ensp;</label>
+            <input type="color" name="background" id="backColor" value="#16bcfd">
+        </p>
+        <p>
+            <label for="hoverColor">Цвет hover&ensp;</label>
+            <input type="color" name="hover" id="hoverColor" value="#ffc60a">
+        </p>
+        <p><input type="button" value="Создать меню" onclick="makeMenu()"></p>
+    </form>
+
+    <ul id="id1"></ul>
+    <img src="#" alt="" id="id2">
+
+    <script>
+        function makeMenu() {
+            let menu_array = menuItem.value.split(", ");
+            if (menu_array.length == 1 && menu_array[0].trim() == "") {
+                alert("Форма не заполнена!");
+                menuItem.style.outline = "2px groove red";
+                menuItem.style.outlineOffset = "1px";
+                menuItem.style.borderRadius = "2px";
+                err1.style.display = "inline";
+                return;
+            } else {
+                menuItem.style.outline = "";
+                menuItem.style.outlineOffset = "";
+                menuItem.style.borderRadius = "";
+                err1.style.display = "none";
+                let menu_html = "";
+                for (i = 0; i < menu_array.length; i++) {
+                    menu_html += `<li onmouseover="this.style.backgroundColor = '${hoverColor.value}'" onmouseout="this.style.backgroundColor = '${backColor.value}'" style="display: inline-block; padding: 1em 2em; color: ${textColor.value}; background-color: ${backColor.value};" onclick="id2.src='../images/${i + 1}.jpg'">${menu_array[i]}</a></li>`;
+                }
+                id1.innerHTML = menu_html;
+                id1.style.listStyle = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="id1"></div>
     <script>
-        let person = new Object();
+        let person = {};
+        person.name = "Javier";
+        person.age = 25;
+        console.log(person.name, person.age);
+        delete person.age;
 
-        person = {
-            firstName: "Janek",
-            lastName: "Pietrow",
-            id: 5566,
-            age: 35,
-
-            fullInfo: function() {
-                return `
-                Imię: ${this.firstName} <br>
-                Nazwisko: ${this.lastName} <br>
-                Ile lat: ${this.age} <br>
-                ID: ${this.id} <br>
-                `
-            }
-
-
+        if ("age" in person) {
+            console.log("Jest");
+        } else {
+            console.log("Nie ma");
         }
-       
-        id1.innerHTML = person.fullInfo();
+
+        // Доступ к свойству через []
+        person["name"] = "Mami";
+        console.log(person.name);
+
+        person.age = 30;
+        let key = "age";
+        console.log(person[key]);
     </script>
 </body>
+
 </html>

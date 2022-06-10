@@ -8,23 +8,33 @@
 </head>
 <body>
     <script>
-        let menu = {
-            width: 800,
-            heigth: 200,
-            title: "Menu"
+        let user = {
+            name: "Wasia"
+        }
+        // Передача по ссылке (зависимая копия объекта)
+        let admin = user;
+        admin.name = "Piecia";
+        console.log("admin:", admin.name);
+        console.log("user:", user.name);
+
+        // Клонирование объекта (независимая копия)
+        let user1 = {
+            name: "Vasia",
+            age: 30,
         }
 
-        // Перебор свойств
-        let count = 0;
-        for (let key in menu) {
+        let clone = {}
+
+        for(let key in user1) {
+            clone[key] = user1[key];
             console.log(`
-            Свойство: ${key},
-            Значение свойства: ${menu[key]}
-            
+            user1: ${key}, ${user1[key]}
+            clone: ${key}, ${clone[key]}
             `);
-            count++;
-            }
-        console.log(count);
+        }
+        clone.name = "Piecia";
+        console.log("user1", user1.name);
+        console.log("clone", clone.name);
     </script>
 </body>
 </html>

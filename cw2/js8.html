@@ -4,33 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цикл while</title>
+    <title>Цикл do .. while</title>
 </head>
 <body>
-    <p id="id1"></p>
     <div id="box"></div>
-    <div id="box1"></div>
     <script>
-        let i=10;
-        while(i>0) {
-            id1.innerHTML += `${i} `;
-            i--;
-
-        }
-    </script>
-    <script>
-        let w=50;
-        const n = 1000;
-        while(w<=n) {
-            box.innerHTML += `<img src="./images/minsk.jpg" alt="" style="width: ${w}px;"> <br>`;
-            w+=50;
-        }
-
-    </script>
-    <script>
-        for(i=10; i>=1; i--) {
-            box1.innerHTML += `<img src="./images/${i}.png">`;
-        }
+        // let i=10;
+        // let s="";
+        // do {
+        //     s+=i+" ";
+        //     i--;
+        // } while (i>=1);
+        // alert(s);
+        let x=1;
+        do {
+            box.innerHTML += `<img src="../images/${x}.png"> 
+                              <img src="../images/${x}.jpg"><br>`;
+            x++;
+        } while (x<=10);
     </script>
 </body>
 </html>

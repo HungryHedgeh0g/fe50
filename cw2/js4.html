@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Введите 2 числа
+        // Сравните эти числа
+        // Вывести результат
+
+        let a = prompt("Введите число a");
+        let b = prompt("Введите число b");
+        if(!isNaN(a)&&!isNaN(b))
+        {
+            if(a>b) {
+                alert (`${a} > ${b}`);
+            } else if(a<b) {
+                alert(`${a} < ${b}`);
+            } else alert(`${a} = ${b}`);
+        } else alert("Введённое(ые) значение(я) не является числом!");
+    </script>
+</body>
+</html>

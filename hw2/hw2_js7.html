@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- С помощью цикла вывести таблицу 
+        с запрашиваемым в prompt количеством строк и столбцов. 
+        В каждую ячейку записать «Ячейка 1..n» 
+        Оформить таблицу стилями. 
+    -->
+
+    <table id="id1"></table>
+
+    <script>
+        id1.style.borderCollapse = "collapse";
+        id1.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+        id1.style.fontSize = "1.2em";
+        id1.style.margin = "auto";
+
+        let row, col;
+        do {
+            row = prompt("Please enter number of ROWS:");
+            col = prompt("Please enter number of COLUMNS:");
+            if (Number.isInteger(+row) && Number.isInteger(+col) && row > 0 && col > 0) {
+                let tab = "";
+                let count = 1;
+                for (i = 1; i <= row; i++) {
+                    tab += '<tr>';
+                    for (j = 1; j <= col; j++) {
+                        switch (j % 2) {
+                            case 1:
+                                tab += `<td style="border: 3px solid red; padding: 5px; background-color: gold; color: blue; font-weight: 700;">Ячейка ${count}</td>`;
+                                count++;
+                                break;
+                            case 0:
+                                tab += `<td style="border: 3px solid red; padding: 5px; background-color: lime; color: darkviolet; font-weight: 700;">Ячейка ${count}</td>`;
+                                count++
+                                break;
+                            default: 
+                                tab += "";
+                        }
+                    }
+                }
+                tab += '</tr>';
+                id1.innerHTML = tab;
+            } else alert("Not Ok");
+        } while (row == "" || row.trim() == "" || col == "" || col.trim() == "" || !Number.isInteger(+row) || !Number.isInteger(+col) || !(row > 0) || !(col > 0));
+    </script>
+
+
+
+</body>
+
+</html>

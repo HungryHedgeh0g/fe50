@@ -9,24 +9,25 @@
 </head>
 
 <body>
+    <div id="box"></div>
     <script>
-        //Многомерный массив
-        let matrix = [
-            [3, 3, 3], //0
-            [1, 5, 1], //1
-            [2, 2, 2]  //2
+        let images = [
+            { pic: { file: "1.jpg", width: 500, heigth: 550 } }, //0-й элемент
+            { pic: { file: "2.jpg", width: 700, heigth: 750 } }, //1-й элемент
+            { pic: { file: "3.jpg", width: 900, heigth: 950 } }  //2-й элемент
         ]
 
-        // объект из массивов
-        console.log(matrix[1][1]); //5
-        let names = {
-            name1: [["Janek", "Wasia"], "Iryna", "Iwona"],
-            name2: ["Piecia", "Siarhej", ["Tamara", "Naścia"]]
+        let s = "";
+        for (i = 0; i < images.length; i++) {
+            f = images[i].pic.file;
+            w = images[i].pic.width;
+            h = images[i].pic.heigth;
+
+            s += `<img src="../images/${f}" width="${w}", height="${h}"> <br>`;
         }
-        console.log(names.name1[1]);
-        console.log(names.name1[0][1]);
-        console.log(names.name2[2][1]);
+        box.innerHTML = s;
     </script>
+
 </body>
 
 </html>

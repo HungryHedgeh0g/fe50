@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>switch .. case  много</title>
+    <title>Тернарный оператор</title>
 </head>
 <body>
     <script>
-        // browser = prompt("Введите ваш браузер");
-        // switch (browser) {
-        //     case "IE":
-        //         alert("У вас Осёл");
-        //         break;
-        //     case "Chrome":
-        //     case "Firefox":
-        //     case "Safari":
-        //     case "Opera":
-        //     case "Edge":
-        //         alert("У вас нормальный браузер!");
-        //         break;
-        //     default:
-        //         alert("ХЗ какой у тебя браузер. Наверно Яндекс.");
-        // }
-        if  (window.navigator.userAgent.includes("Chrome") || 
-        window.navigator.userAgent.includes("Firefox") || 
-        window.navigator.userAgent.includes("Safari") || 
-        window.navigator.userAgent.includes("Opera") || 
-        window.navigator.userAgent.includes("Edge")) alert("У вас нормальный браузер!");
-        else 
-        if(window.navigator.userAgent.includes("IE")) alert("У вас Осёл");
-        else alert("ХЗ какой у тебя браузер. Наверно Яндекс.");
-        alert(window.navigator.userAgent);
+        let age = prompt("Введите ваш возраст", 18);
+        // let access = (age>=18) ? "access granted" : "access denied";
+        // alert(access);
+
+        let access = (age <=14) ? "you're child" : 
+        (age <= 19) ? "you're teen" :
+        (age <= 28) ? "you're young" :
+        (age <= 100) ? "you're adult" :
+        "you're age"
+
+        alert(access);
+
+
+        // if (age>=18){
+        //     access = "access granted";
+        // } else access = "access denied";
+        // alert(access);
     </script>
 </body>
 </html>

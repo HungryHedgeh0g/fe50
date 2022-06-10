@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Вычислить (суммы элементов массива):
+    C = ( sum(x[i]) + sum(y[i]) ) / 2
+
+    xi = {0.3; 5.2; 9.4; 8},
+    уi = {43; 5; 3.4; 8; 20}
+
+    Массивы объявить в программе. Для вычисления суммы 
+    элементов массивов использовать функцию и передавать в нее 
+    массив целиком, функция должна возвращать сумму элементов. -->
+
+    <script>
+        let x = [0.3, 5.2, 9.4, 8];
+        let y = [43, 5, 3.4, 8, 20];
+
+        function series(array) {
+            let sum = 0;
+            for (i = 0; i < array.length; i++)
+                sum += array[i];
+            return sum;
+        }
+
+        let c = (series(x) + series(y)) / 2;
+
+        alert(`Результат вычисления равен ${c.toFixed(2)}`);
+
+        // Как заставить считать правильно, если я заведомо не знаю, сколько знаков после запятой?
+        // Или от погрешностей не уйдёшь?
+    </script>
+
+</body>
+
+</html>

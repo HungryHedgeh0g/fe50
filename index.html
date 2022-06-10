@@ -10,55 +10,151 @@
         * {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         h1 {
             text-align: center;
         }
+
         h2 {
             color: rgb(13, 107, 201);
         }
+
         li {
             list-style: none;
         }
+
         div.wrap {
             display: flex;
         }
-        div.left, div.right {
+
+        div.left,
+        div.right {
             width: 47vw;
             margin: 0 auto;
             border: 1px dotted black;
             padding: 10px;
         }
+
+        @media (max-width: 800px) {
+            div.wrap {
+                display: flex;
+                flex-direction: column;
+            }
+
+            div.left,
+            div.right {
+                width: 80vw;
+                margin: 20px auto;
+                border: 1px dotted black;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            h1 {
+                font-size: 18pt;
+            }
+
+            h2 {
+                font-size: 14pt;
+            }
+
+            h3 {
+                font-size: 13pt;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h1>Курс "Современный Frontend с использованием JavaScript и HTML5</h1>
+    <h1>Курс "Современный Frontend с&nbsp;использованием JavaScript и&nbsp;HTML5</h1>
 
     <div class="wrap">
         <div class="left">
             <h2>Тренировочные упражнения, теория</h2>
             <h3>Занятие 1</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./cw1/js1.html">Упражнение 1</a></li>
+                <li><a href="./cw1/js2.html">Упражнение 2</a></li>
+                <li><a href="./cw1/js3.html">Упражнение 3</a></li>
+            </ol>
             <h3>Занятие 2</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./cw2/js4.html">Упражнение 4</a></li>
+                <li><a href="./cw2/js5.html">Упражнение 5</a></li>
+                <li><a href="./cw2/js6.html">Упражнение 6</a></li>
+                <li><a href="./cw2/js7.html">Упражнение 7</a></li>
+                <li><a href="./cw2/js8.html">Упражнение 8</a></li>
+                <li><a href="./cw2/js9.html">Упражнение 9</a></li>
+                <li><a href="./cw2/js10.html">Упражнение 10</a></li>
+                <li><a href="./cw2/js11.html">Упражнение 11</a></li>
+            </ol>
             <h3>Занятие 3</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./cw3/js12.html">Упражнение 12</a></li>
+                <li><a href="./cw3/js13.html">Упражнение 13</a></li>
+                <li><a href="./cw3/js14.html">Упражнение 14</a></li>
+                <li><a href="./cw3/js15.html">Упражнение 15</a></li>
+                <li><a href="./cw3/js16.html">Упражнение 16</a></li>
+                <li><a href="./cw3/js17.html">Упражнение 17</a></li>
+                <li><a href="./cw3/js18.html">Упражнение 18</a></li>
+                <li><a href="./cw3/js19.html">Упражнение 19</a></li>
+                <li><a href="./cw3/js20.html">Упражнение 20</a></li>
+            </ol>
             <h3>Занятие 4</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./cw4/js21.html">Упражнение 21</a></li>
+                <li><a href="./cw4/js22.html">Упражнение 22</a></li>
+            </ol>
+            <h3>Занятие 5</h3>
+            <ol>
+                <li><a href="./cw5/js23.html">Упражнение 23</a></li>
+                <li><a href="./cw5/js24.html">Упражнение 24</a></li>
+                <li><a href="./cw5/js25.html">Упражнение 25</a></li>
+                <li><a href="./cw5/js26.html">Упражнение 26</a></li>
+                <li><a href="./cw5/js27.html">Упражнение 27</a></li>
+                <li><a href="./cw5/js28.html">Упражнение 28</a></li>
+                <li><a href="./cw5/js29.html">Упражнение 29</a></li>
+                <li><a href="./cw5/js30.html">Упражнение 30</a></li>
+                <li><a href="./cw5/js31.html">Упражнение 31</a></li>
+                <li><a href="./cw5/js32.html">Упражнение 32</a>&emsp;(<a href="./cw5/js32v1.html">v2</a>)&emsp;(<a href="./cw5/js32v2.html">v3</a>)</li>
+            </ol>
         </div>
 
         <div class="right">
             <h2>Домашние задания</h2>
             <h3>Д/з №1</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./hw1/hw1_js1.html">Задание 1</a></li>
+                <li><a href="./hw1/hw1_js2.html">Задание 2</a>&emsp;(<a href="./hw1/hw1_js2v2.html">версия 2</a>)</li>
+            </ol>
             <h3>Д/з №2</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./hw2/hw2_js1.html">Задание 1</a>&emsp;(<a href="./hw2/hw2_js1v2.html">версия 2</a>)</li>
+                <li><a href="./hw2/hw2_js2.html">Задание 2</a></li>
+                <li><a href="./hw2/hw2_js3.html">Задание 3</a></li>
+                <li><a href="./hw2/hw2_js4.html">Задание 4</a></li>
+                <li><a href="./hw2/hw2_js5.html">Задание 5</a></li>
+                <li><a href="./hw2/hw2_js6.html">Задание 6</a></li>
+                <li><a href="./hw2/hw2_js7.html">Задание 7</a></li>
+            </ol>
             <h3>Д/з №3</h3>
-            <p>пока не загружено</p>
+            <ol>
+                <li><a href="./hw3/hw3_js1.html">Задание 1</a></li>
+                <li><a href="./hw3/hw3_js2.html">Задание 2</a></li>
+                <li><a href="./hw3/hw3_js3.html">Задание 3</a></li>
+                <li><a href="./hw3/hw3_js4.html">Задание 4</a></li>
+                <li><a href="./hw3/hw3_js5.html">Задание 5</a></li>
+                <li><a href="./hw3/hw3_js6.html">Задание 6</a></li>
+            </ol>
             <h3>Д/з №4</h3>
             <ol>
                 <li><a href="./hw4/hw4_js1.html">Задание 1</a></li>
                 <li><a href="./hw4/hw4_js2.html">Задание 2</a></li>
+            </ol>
+            <h3>Д/з №5</h3>
+            <ol>
+                <li><a href="./hw5/hw5_js1.html">Задание 1</a></li>
             </ol>
         </div>
     </div>

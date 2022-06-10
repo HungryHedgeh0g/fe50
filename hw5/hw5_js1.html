@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Д/з №5, задание 1</title>
+    <style id="stl1">
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap"></div>
+
+    <script>
+        // Напишите скрипт, который с помощью функции создает 
+        // столько блоков 250 х 250 пикселей, сколько введено в prompt 
+        // и раскрашивает каждый блок рандомным цветом, размещает 
+        // в центр каждого блока картинку размером 100 х 100 пикс.
+
+        function getRandomColor() {
+            const MAX = 255;
+            let r = Math.random();
+            let g = Math.random();
+            let b = Math.random();
+            let rgb = `#${Math.floor(r * MAX).toString(16).padStart(2, '0')}${Math.floor(g * MAX).toString(16).padStart(2, '0')}${Math.floor(b * MAX).toString(16).padStart(2, '0')}`;
+            return rgb;
+        }
+
+        function createDivs(x) {
+            if ((Number.isInteger(+x)) && (x > 0) && (x <= 11) && x.trim() !== "") {
+                for (i = 0; i < x; i++) {
+                    divs += `<div class="item" style="background-color: ${getRandomColor()};"><img src="../images/${i + 1}.jpg" alt=""></div>`;
+                }
+                wrap.innerHTML = divs;
+                stl1.innerHTML += `
+                    .item {
+                        width: 250px;
+                        height: 250px;
+                    }
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                `
+            } else {
+                alert("Что-то пошло не так.");
+                console.log(`count = '${x}'`);
+            }
+        }
+
+        let divs = "";
+        let count = prompt("Введите число от 1 до 11:");
+
+        createDivs(count);
+
+
+    </script>
+</body>
+
+</html>

@@ -7,21 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // Введите 2 числа
-        // Сравните эти числа
-        // Вывести результат
+    <p id="id1">1 2 3 ... 10</p>
 
-        let a = prompt("Введите число a");
-        let b = prompt("Введите число b");
-        if(!isNaN(a)&&!isNaN(b))
-        {
-            if(a>b) {
-                alert (`${a} > ${b}`);
-            } else if(a<b) {
-                alert(`${a} < ${b}`);
-            } else alert(`${a} = ${b}`);
-        } else alert("Введённое(ые) значение(я) не является числом!");
+    <script>
+        let s="";
+        for(i=1; i<=10; i++) {
+            s += `${i} `;
+        }
+        id1.innerHTML=s;
     </script>
 </body>
 </html>

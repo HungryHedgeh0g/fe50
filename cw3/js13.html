@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Логин и пароль</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        let userName = prompt("Please enter your username:");
-        if(userName == "Admin") {
+        // y=2^x+1
+        let x=5, n=3;
+        y=Math.pow(2,x)+1;
+        alert(y);
+        y=2*Math.exp(x)+1;
+        alert(y);
 
-        } else if (userName == null) {
-            alert("Aborted");
-        } else alert ("User not found");
+        //z=ln(x)/x
+        z=Math.log(x)/x;
+        alert(z);
+
+        // w=x*y, when x<z^2, else w=n*x+2
+
+        if(x<(Math.pow(z,2))) alert (x*y);
+        else alert(n*x+2);
+
     </script>
 </body>
 </html>

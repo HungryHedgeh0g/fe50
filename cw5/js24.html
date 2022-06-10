@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let r = Math.random(); // random number of [0; 1)
-        console.log(r);
-
-        // find a random number of (0..5)
-        const MAX = 5;
-        let result = r*MAX;
-        console.log(result);
-
-        // round();
-        // floor(); пол
-        // ceil();  потолок
-
-        // round number
-        let result1 = Math.round(result);
-        console.log("Round, ", result1);
-        let result2 = Math.floor(result);
-        console.log("Floor, ", result2);
-        let result3 = Math.ceil(result);
-        console.log("Ceil, ", result3);
+        let cities = ["Mińsk", "Nowy Jork", "Londyn", "Kraków"];
+        let foo = cities[Math.floor(Math.random()*cities.length)];
+        console.log(foo);
     </script>
 </body>
+
 </html>

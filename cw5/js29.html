@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        let person = {};
-        person.name = "Javier";
-        person.age = 25;
-        console.log(person.name, person.age);
-        delete person.age;
-
-        if ("age" in person) {
-            console.log("Jest");
-        } else {
-            console.log("Nie ma");
+        let menu = {
+            width: 800,
+            heigth: 200,
+            title: "Menu"
         }
 
-        // Доступ к свойству через []
-        person["name"] = "Mami";
-        console.log(person.name);
-
-        person.age = 30;
-        let key = "age";
-        console.log(person[key]);
+        // Перебор свойств
+        let count = 0;
+        for (let key in menu) {
+            console.log(`
+            Свойство: ${key},
+            Значение свойства: ${menu[key]}
+            
+            `);
+            count++;
+            }
+        console.log(count);
     </script>
 </body>
-
 </html>
