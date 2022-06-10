@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/myScript.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // alert("Hello World!");
+    </script>
+
+    <script>
+        // Типы данных
+
+        // * число (Number);
+        // * строка (String);
+        // * логический (Boolean);
+
+        // * null
+        // * undefined
+        // * object
+        // * Symbol
+
+        // Переменные и константы
+
+        // 'use strict'; //включить строгий режим
+
+        const MY_COLOUR = "red";
+
+        // Объявление чисел
+        let n1 = 5;
+        let n3;
+        let n4 = 7.2 + 3 - n1;
+
+        let n2 = new Number(7);
+        let n5 = new Number();
+
+        // Объявление строк
+        s1 = ""; // empty string
+        let s2 = "Hello";
+
+        s3 = new String(); // пустая строка
+        s4 = new String("125.7"); // 125.7
+
+        // Объявление логических типов
+        b1 = true;
+
+        b2 = new Boolean(); // false
+        b3 = new Boolean(false);
+
+        // Кавычки для строк
+        // "" - двойные кавычки
+        // '' - одиночные прямые кавычки
+        // `` - одиночные обратные кавычки (шаблонная строка)
+
+        let myString1 = "1st String";
+        let myString2 = '2nd Srting';
+
+        // Правило вложенных кавычек
+        let myString3 = "<img src=\"minsk.jpg\" alt=\"Минск\">";
+
+        name = "Sonic";
+
+        // Hello, Sonic
+        // let hello = "Hello, " + name + "!";
+        // alert(hello);
+
+        let hello1 = `Hello, ${name}!`; // шаблонная строка
+        // alert(hello1);
+
+        // Инкремент
+        let i = 3;
+        i++; //инкремент
+        console.log(i); //4
+        i += 3;
+        console.log(i); //7
+        i = i + 5;
+        console.log(i); //12
+
+        // Декремент
+        i--;
+        console.log(i);
+        i -= 15;
+        console.log(i);
+
+        //Арифметические операторы
+        // + 
+        // - 
+        // * 
+        // / 
+        // % - остаток от деления
+
+        // Арифметические операторы присваивания
+        i += 3; // i = i + 3;
+        i -= 3; // i = i - 3;
+        i *= 3; // i = i * 3;
+        i /= 3; // i = i / 3;
+
+        // Добавление к строке
+
+        let message1 = "Hello, ";
+        message1 += "Volodymir!"
+        console.log(message1);
+
+        // Определение типа переменной
+        // alert(typeof(b2));
+
+        // Операторы сравнения
+        console.log(2 > 1);
+        console.log(2 < 1);
+        console.log(2 >= 2);
+        console.log(2 <= 1);
+        console.log(2 == 1);
+        console.log(2 != 1);
+        console.log("");
+        console.log(0 === false); // сравнение без преобразования типов
+        console.log(0 == false); // сравнение с преобразованием типов
+
+    </script>
+
+</body>
+
+</html>

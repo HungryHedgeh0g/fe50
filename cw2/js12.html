@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тернарный оператор</title>
+</head>
+<body>
+    <script>
+        let age = prompt("Введите ваш возраст", 18);
+        // let access = (age>=18) ? "access granted" : "access denied";
+        // alert(access);
+
+        let access = (age <=14) ? "you're child" : 
+        (age <= 19) ? "you're teen" :
+        (age <= 28) ? "you're young" :
+        (age <= 100) ? "you're adult" :
+        "you're age"
+
+        alert(access);
+
+
+        // if (age>=18){
+        //     access = "access granted";
+        // } else access = "access denied";
+        // alert(access);
+    </script>
+</body>
+</html>

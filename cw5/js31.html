@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: "Wasia"
+        }
+        // Передача по ссылке (зависимая копия объекта)
+        let admin = user;
+        admin.name = "Piecia";
+        console.log("admin:", admin.name);
+        console.log("user:", user.name);
+
+        // Клонирование объекта (независимая копия)
+        let user1 = {
+            name: "Vasia",
+            age: 30,
+        }
+
+        let clone = {}
+
+        for(let key in user1) {
+            clone[key] = user1[key];
+            console.log(`
+            user1: ${key}, ${user1[key]}
+            clone: ${key}, ${clone[key]}
+            `);
+        }
+        clone.name = "Piecia";
+        console.log("user1", user1.name);
+        console.log("clone", clone.name);
+    </script>
+</body>
+</html>

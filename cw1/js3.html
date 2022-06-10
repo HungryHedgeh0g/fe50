@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="pic" src="./images/1.jpg" alt="">
+
+    <script>
+        let picnumber = parseInt(prompt("Введите номер картинки:", "1"));
+        if (picnumber <= 11 && picnumber >= 1)
+            pic.src = `./images/${picnumber}.jpg`;
+        else alert("Такой картинки нет (1-11)!")
+    </script>
+</body>
+
+</html>

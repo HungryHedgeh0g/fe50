@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы массива</title>
+</head>
+
+<body>
+    
+    <p id="id1">Минск &mdash; большой, чистый город</p>
+    <p id="id2"></p>
+
+
+    <script>
+        // Methods of Arrays
+
+        // split() - transforms string into array
+
+        // let str1 = "Main, About, News";
+        // console.log(str1);
+        // let menu = str1.split(", ");
+        // console.log(menu);
+
+        // for (let index of menu) {
+        //     console.log(index);
+        // }
+
+        // pop() - удаляет последний элемент
+        // let fruits = ["apple", "orange", "mandarin"];
+
+        // let end = fruits.pop();
+
+        // console.log(end);
+        // console.log(fruits);
+
+        // push() - добавляет в конец массива
+
+        // let fruits = ["apple", "orange"];
+        // fruits.push("lemon");
+        // console.log(fruits);
+        
+        // shift() - удаляет первый элемент
+
+        // let fruits = ["apple", "orange", "mandarin"];
+        // let start = fruits.shift();
+
+        // console.log(start);
+        // console.log(fruits);
+
+        // unshift() - добавляет в начало массива
+
+        // let fruits = ["apple", "orange", "mandarin"];
+        // fruits.unshift("banana");
+        // console.log(fruits);
+
+        // join() - преобразование массива в строку
+
+        // let names = ["Nick", "Mike", "Steve", "Bill"];
+        // let name_string = names.join(", ");
+        // console.log(names);
+        // console.log(name_string);
+
+        // splice() - заменяет (или удаляет) часть элементов в массиве
+
+        // let numbers = [1, 2, 3, 4, 5];
+        // // заменим числа 2, 3 на 2.1, 3.5
+        // let cut = numbers.splice(1, 2, 2.1, 3.5);
+        // console.log(cut);
+        // console.log(numbers);
+
+        // slice() - копирует часть элементов массива
+
+        // let arr = ["ехали", "медведи", "на", "велосипеде"];
+        // let arr1 = arr.slice(1,2);
+        // console.log(arr);
+        // console.log(arr1);
+
+        // reverse() - меняет порядок элементов задом наперёд
+
+        // let arr = [1, 2, 3, 4, 5];
+        // arr.reverse();
+        // console.log(arr);
+
+        // concat() - объединение массивов
+
+        // let arr = [1, 2];
+        // let newArr = arr.concat(3, 4, "Вася", true);
+        // console.log(newArr);
+
+        // forEach() - цикл для массива
+
+        // let fruits = ["apple", "orange", "mandarin"];
+
+        // fruits.forEach(function(item, i, fruits) {
+        //     console.log(`${i}: ${item}, ${fruits}`);
+        // })
+
+        // Задание
+        // дана строка "Минск - большой, чистый город"
+        // заменить "большой, чистый" на "крупный, современный"
+
+        // итоговая строка "Минск - крупный, современный город"
+
+        // 1. Объявить исходную строку
+        // 2. Преобразовать её в массив (split())
+        // 3. Заменить слова (элементы массива (splice()))
+        // 4. Преобразовать массив в строку (join())
+
+        let string1 = id1.innerHTML;
+        let arr1 = string1.split(" ");
+        let arr2 = arr1.splice(2, 2, "крупный,", "современный");
+        id2.innerHTML = arr1.join(" ");
+        console.log(id2.innerHTML);
+
+    </script>
+
+</body>
+
+</html>
