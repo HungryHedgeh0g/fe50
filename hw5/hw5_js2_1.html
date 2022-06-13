@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ассоциативные массивы. Map</title>
+</head>
+
+<body>
+    <script>
+        // Объект Map (ассоциативный массив)
+        // Ассоциативный массив - это набор пар "ключ-значение"
+        // Ключами могут быть как примитивы, так и ссылки,
+        // в отличие от объектов, где ключ - это строка
+
+        let arr1 = new Map(); // пустой ассоциативный массив
+
+        // создадим ассоциативный массив из 3 пар
+        let arr = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+            ['key3', 'value3']
+        ]);
+
+        // узнаем количество элементов в массиве
+        console.log(arr.size); // 3
+
+        // добавим элемент в массив одну пару
+        arr.set('key4', 'value4');
+
+        // добавим элемент в массив несколько пар
+        arr.set('key5', 'value5');
+        arr.set('key6', 'value6');
+
+        // или так
+        arr
+            .set('key7', 'value7')
+            .set('key8', 'value8');
+
+        // Если в массиве есть ключ с таким именем, произойдёт замена значения
+        arr.set('key1', 'new value');
+        console.log(arr);
+
+        // получим значение элемента по ключу
+        console.log("key4 = ", arr.get('key4')); // value4
+
+        // проверим, есть ли в массиве ключ key2
+        console.log("key2 существует:", arr.has('key2')); // true
+
+        // удаление ключа из массива (с возвращением true если был, и false если не было)
+        arr.delete('key1');
+
+        if (arr.delete('key1')) {
+            console.log("Запись с ключом 'key1' удалена из массива!");
+        } else {
+            console.log("Невозможно найти в массиве запись с ключом 'key1'!");
+        } // мы уже удалили его, поэтому вернётся ветка else
+
+        // очистить массив (удалить все элементы)
+        // arr.clear();
+        // console.log(arr, ", количество элементов: ", arr.size);
+
+        // перебор по keys
+        for (let key of arr.keys()) {
+            console.log(key);
+        }
+
+        // перебор по values
+        for (let value of arr.values()) {
+            console.log(value);
+        }
+
+        // перебор по entries
+        for (let pair of arr.entries()) {
+            // pair - это массив [key, value]
+            console.log(pair[0]); // key
+            console.log(pair[1]); // value
+            console.log(`Ключ=${pair[0]}, значение=${pair[1]}`);
+        }
+
+        // последний метод используется по умолчанию, поэтому можно его опустить
+        for (let pair of arr) {
+            console.log(`Ключ=${pair[0]}, значение=${pair[1]}`);
+        }
+
+        // можно перебрать массив через forEach
+        arr.forEach(function (value, key) {
+            console.log('key = ' + key + ', value = ' + value);
+        });
+
+        // Преобразование ассоциативного массива в JSON и наоборот:
+        arr = new Map([
+            ['question', 'Текст вопроса'],
+            ['answer1', 'Ответ 1...'],
+            ['answer2', 'Ответ 2...']
+        ]);
+        
+        // в JSON
+        jsonStr = JSON.stringify([...arr]);
+        console.log(jsonStr);
+
+        // из JSON в Map
+        mapArr = new Map(JSON.parse(jsonStr));
+        console.log(mapArr);
+
+    </script>
+</body>
+
+</html>

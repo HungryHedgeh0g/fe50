@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ассоциативный массив как объект</title>
+</head>
+
+<body>
+    <script>
+        // let arr = {}; // пустой ассоциативный массив (объект)
+
+        // let arr = new Object();
+
+        let arr = Object.create(null);
+
+        // let myArray = {
+        //     "ключ1": "значение1",
+        //     "ключ2": "значение2", ...
+        // }
+
+        // добавление элементов
+        arr["key1"] = "текстовое значение";
+        arr["key2"] = 22;
+        // аналогично, если ключ существует, то значение перезапишется
+
+        console.log(arr["key1"]);
+        console.log(arr.key2);
+
+        // получить число элементов
+        let myArray = { "key1": "value1", "key2": "value2", "key3": "value3" }
+        // 1 - получаем массив ключей, методом keys
+        // 2 - используем свойство length
+        Object.keys(myArray).length; // 3
+
+        // удаление элемента
+        delete myArray["key1"];
+
+        // проверка наличия ключа
+        // способ 1
+        if (myArray.hasOwnProperty("key2")) {
+            console.log("Ключ key2 существует");
+        } else {
+            console.log("Ключа key2 не существует");
+        }
+
+        // способ 2
+        if ("key1" in myArray) {
+            console.log("Ключ key1 есть в массиве");
+        } else {
+            console.log("Ключа key1 нет в массиве");
+        }
+
+        // перебрать элементы ассоциативного массива (свойства объекта)
+        for (key in myArray) {
+            console.log(key + "=" + myArray[key]);
+        }
+
+        let myArr = {
+            key1: "value1",
+            key2: "value2",
+            key3: "value3"
+        };
+
+        // преобразовать в JSON
+        jsonStr = JSON.stringify(myArr);
+
+        // из JSON в ассоциативный массив (объект)
+        objArr = JSON.parse(jsonStr);
+
+        // получить значение по ключу key1
+        console.log(arr.key1);
+
+    </script>
+</body>
+
+</html>
