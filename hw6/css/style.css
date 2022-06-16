@@ -33,12 +33,13 @@ body {
     margin-top: 10px;
 }
 
-.poster img:nth-child(2) {
-    transform: translate(10%, -150%);
+.poster img:nth-child(3) {
+    position: fixed;
+    transform: translate(-90%, -300%);
 }
 
-.poster img:nth-child(3) {
-    transform: translate(70%, -240%);
+.poster img:nth-child(2) {
+    transform: translate(180%, -200%);
 }
 
 .title {

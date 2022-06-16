@@ -21,7 +21,7 @@ let mas = [
         price: 60,
         currency: 'руб.',
         discount: 10,
-        rating: 4,
+        rating: 4.5,
         buy_button: 'buy.png',
         promotion: true,
     },
@@ -34,9 +34,9 @@ let mas = [
         price: 40,
         currency: 'руб.',
         discount: 10,
-        rating: 4,
+        rating: 3,
         buy_button: 'buy.png',
-        promotion: true,
+        promotion: false,
     }
 ]
 
@@ -51,7 +51,8 @@ for (let elem in mas) {
     let starsCount = 0;
     // можно загнать возможные баллы в массив и не плодить длинные ифы
     // но я пока не хочу
-    if (mas[elem].rating > 0 && mas[elem].rating <= 5 && ((mas[elem].rating + 0.5) % 2 == 1 || (mas[elem].rating + 0.5) % 2 == 0 || mas[elem].rating % 2 == 1 || mas[elem].rating % 2 == 0)) {
+    let rates = [.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+    if(rates.includes(mas[elem].rating)) {
 
         for (i = 0.5; i <= mas[elem].rating; i += 0.5) {
             if (Number.isInteger(i)) {
@@ -67,12 +68,29 @@ for (let elem in mas) {
 
     // доделать акцию
     // знаю как делается, сделаю чуть позже
+    let promo = "";
+    let promoPic = "";
+    if(mas[elem].promotion) {
+        promo = `
+        <div>${offerPrice}</div> 
+        <div>${fullPrice}</div>
+        `;
+        promoPic = `<img src="./img/${mas[elem].offer}" alt="Акция">`;
+    } else {
+        promo = `
+        <div>${fullPrice}</div>
+        `;
+        promoPic = `
+        <img src="./img/${mas[elem].offer}" alt="Акция" style="display: none;">
+        `;
+    }
+
     card += `
     <div class="card">
         <div class="poster">
             <img src="./img/${mas[elem].poster}" alt="Тайная жизнь домашних животных 2">
-            <img src="./img/${mas[elem].offer}" alt="Акция">
             <img src="./img/${mas[elem].type}" alt="Тип носителя">
+            ${promoPic}
 
         </div>
         <div class="title">
@@ -81,8 +99,9 @@ for (let elem in mas) {
         </div>
         
         <div class="price">
-            <div>${offerPrice}</div>
-            <div>${fullPrice}</div>
+            ${promo}
+            <!--<div>${offerPrice}</div>
+            <div>${fullPrice}</div>-->
         </div>
        
         <div class="rating">
