@@ -81,7 +81,7 @@ for (let elem in mas) {
         <div>${fullPrice}</div>
         `;
         promoPic = `
-        <img src="./img/${mas[elem].offer}" alt="Акция" style="display: none;">
+        <img src="./img/${mas[elem].offer}" alt="Акция" style="opacity: 0;">
         `;
     }
 
@@ -89,8 +89,8 @@ for (let elem in mas) {
     <div class="card">
         <div class="poster">
             <img src="./img/${mas[elem].poster}" alt="Тайная жизнь домашних животных 2">
-            <img src="./img/${mas[elem].type}" alt="Тип носителя">
             ${promoPic}
+            <img src="./img/${mas[elem].type}" alt="Тип носителя">
 
         </div>
         <div class="title">
