@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p {
+            color: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <p>Параграф 1</p>
+    <p>Параграф 2</p>
+    <p>Параграф 3</p>
+    <p>Параграф 4</p>
+    <p>Параграф 5</p>
+    <p>Параграф 6</p>
+    <p>Параграф 7</p>
+    <p>Параграф 8</p>
+    <p>Параграф 9</p>
+    <p>Параграф 10</p>
+    <button id="b1" onclick="change()">Изменить</button>
+
+    <script>
+        // document.querySelectorAll() - поиск по селекторам CSS
+        function change() {
+            let elems = document.querySelectorAll("p:nth-child(even)");
+            for(index of elems) {
+                index.style = `
+                border: 1px solid #f00;
+                color: tomato;
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>

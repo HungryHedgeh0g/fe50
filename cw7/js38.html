@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск и выбор идентификатора по тегу</title>
+</head>
+<body>
+    <section id="findHere">
+        <a href="#">Текст 1</a>
+        <a href="#">Текст 2</a>
+        <a href="#">Текст 3</a>
+        <a href="#">Текст 4</a>
+        <a href="#">Текст 5</a>
+    </section>
+        
+    <section>
+        <a href="#">Текст 6</a>
+        <a href="#">Текст 7</a>
+    </section>
+
+    <button id="b1" onclick="change()">Изменить</button>
+
+    <script>
+        // document.getElementsByTagName() - поиск элементов по имени тега
+        function change() {
+            // let f = document.getElementById("findHere");
+            let arrA = f.getElementsByTagName("a");
+
+            // arrA - массив
+            let n=1;
+            for(let elem of arrA) {
+                elem.href = `link${n}.html`;
+                elem.innerHTML = `Ссылка ${n++}`;
+            }
+        }
+    </script>
+</body>
+</html>

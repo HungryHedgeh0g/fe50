@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Д/з №7, задание 2</title>
+</head>
+
+<body>
+    <article>
+        <p>Alphabet</p>
+        <section>
+            <p> A B C D E F G </p>
+            <p>come on out and play with me.</p>
+            <p>H I J </p>
+            <p>come and play.</p>
+            <p>K L M </p>
+            <p>come with them. </p>
+            <p>N O P </p>
+            <p>near the tree. </p>
+            <p>Q R S T U V </p>
+            <p>Oh, how happy we will be. </p>
+            <p>W X Y Z </p>
+            <p>Lot's of fun for you and me. </p>
+        </section>
+    </article>
+    <button id="btn" onclick="doEverything()" style="width: 100px;">Пуск!</button>
+    <div id="id1" style="margin-top: 20px;"></div>
+
+    <script>
+            // Создать HTML с детской считалочкой показанный ниже. Разместить кнопку, 
+            // которая по нажатию вызывает программу. С помощью метода querySelectorAll() 
+            // выбрать все буквы алфавита и вывести алфавит отдельной строкой снизу под считалочкой: 
+            // A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+
+        function doEverything() {
+            document.getElementById('btn').hidden = true;
+            let letters = document.querySelectorAll('section > p:nth-child(odd)');
+            let s = '';
+            for(elem of letters) {
+                s += elem.innerHTML;
+            }
+            document.getElementById("id1").innerHTML = s;
+            
+            // С помощью метода getElementsByTagName выбрать все параграфы 
+            // только внутри блока <section>. С помощью свойства style.cssText 
+            // заключить каждую строку считалочки в рамочку, задать шрифт, 
+            // размер шрифта, цвет фона, цвет текста и т.п.
+
+            let section = document.getElementsByTagName('section')[0];
+            let pars = section.getElementsByTagName('p');
+            for (elem of pars) {
+                elem.style.cssText = `
+                    border: 1px dotted gold;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 0.8em;
+                    background-color: beige;
+                    color: salmon;
+                    width: fit-content;
+                    margin-left: 15px;
+                    font-weight: 600;
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>

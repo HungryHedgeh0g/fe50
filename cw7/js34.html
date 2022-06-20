@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="sayHello()">
+
+    <h2 onclick="this.innerHTML='Привет!'">Нажмите</h2>
+    <h2 onclick="changeText(id)">Нажмите</h2>
+
+    <input id="text">
+    <button onclick="message()">и нажмите</button>
+    <!-- События -->
+
+    <script>
+        // onload - браузер загрузил страницу
+
+        // onclick - кликнули по элементу
+
+        // onmouseover - при наведении мышки
+
+        // onmouseout - при уведении мышки
+
+        // onchange - элемент изменён
+
+        function sayHello() {
+            alert("Hello!");
+        }
+
+        function changeText() {
+            id.innerHTML = "Привет из функции!";
+        }
+        let s = "";
+
+        function message() {
+            text.value = `Вы ввели: ${text.value}`;
+            
+        }
+    </script>
+</body>
+
+</html>

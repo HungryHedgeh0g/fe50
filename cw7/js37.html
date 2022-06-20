@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <img src="./images/1.jpg" alt="" id="im1">
+    <p id="id1">Подпись картинки</p>
+    <button id="b1" onclick="change()">Изменить</button>
+    <script>
+        function change() {
+            let myImg = document.getElementById("im1");
+            let myP = document.getElementById("id1");
+            let myBtn = document.getElementById("b1");
+            myImg.src = "./images/2.jpg";
+            myP.innerHTML = "Новая надпись";
+            myBtn.style.display = "none"
+            // im1.src = "./images/2.jpg";
+            // id1.innerHTML = "Новая надпись";
+            // b1.style.display = "none";
+        }
+    </script>
+</body>
+</html>
