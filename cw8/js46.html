@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="func()">
+    <a id="link1" href="https://google.com"><img id="im1" src="./images/minsk1.jpg" alt=""></a>
+
+    <script>
+        to = ["https://google.com", "https://yandex.by"];
+
+        let max = 2, n=1;
+
+        function func() {
+            if(n>max) n=1;
+            link1.href = `${to[n-1]}`;
+            im1.src = `./images/minsk${n++}.jpg`;
+            
+            setTimeout(func, 2000);
+        }
+    </script>
+</body>
+
+</html>

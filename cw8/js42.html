@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: red;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+    <script>
+        // подобрать стиль
+        let myStyle = getComputedStyle(document.body);
+        let s = "";
+        s = `Всего свойств: ${myStyle.length}`;
+        box.innerHTML = s;
+        for(i=0; i<myStyle.length; i++) {
+            prop = myStyle[i];
+            s += `
+                <br> ${prop}: ${myStyle[prop]}
+            `;
+        }
+        box.innerHTML = s;
+    </script>
+
+</body>
+
+</html>

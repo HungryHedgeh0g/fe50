@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id1"></p>
+
+    <script>
+        id1.innerHTML = `
+        <p>Your browser: ${navigator.appName} <br>
+        Your browser's codename: ${navigator.appCodeName} <br>
+        Version: ${navigator.appVersion}</p>
+
+        <p>You have visited: ${history.length}</p>
+
+        <p>Your display: <br>Resolution ${screen.width}x${screen.height}<br>
+        Color depth (bits): ${screen.colorDepth}
+            
+        </p>
+        `;
+    </script>
+</body>
+</html>

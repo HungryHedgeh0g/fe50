@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="id1"></p>
+    <a href="#link1">Link 1</a>
+    <h2 id="link1">Paragraph 1</h2>
+    <script>
+        id1.innerHTML = `
+        href: ${location.href} <br>
+        protocol: ${location.protocol} <br>
+        host: ${location.host} <br>
+        pathname: ${location.pathname} <br>
+        hash: ${location.hash} <br>
+        search: ${location.search} <br>
+        `;
+    </script>
+</body>
+
+</html>

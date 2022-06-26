@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="timer()">
+    <p id="id1"></p>
+
+    <script>
+
+        let n = 0, t = 10;
+
+        function timer() {
+            if (n > t) n = 0;
+            id1.innerHTML = `Таймер до ${t} сек: ${n++}`;
+            setTimeout(timer, 1000);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

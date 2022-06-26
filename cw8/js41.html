@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 10px 20px 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <p id="id1"></p>
+    <script>
+        // получаем доступ к установленным стилям
+        let myStyle = getComputedStyle(document.body);
+        id1.innerHTML = `
+            <p>${myStyle.margin}</p>
+            <p>${myStyle.marginTop}</p>
+            <p>${myStyle.marginRight}</p>
+            <p>${myStyle.marginBottom}</p>
+            <p>${myStyle.marginLeft}</p>
+        `;
+    </script>
+</body>
+</html>
