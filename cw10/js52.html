@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-columns: minmax(150px, 550px) 1fr 1fr; */
+            /* grid-template-rows: 200px 200px; */
+
+            /* justify-items: stretch; */
+            /* align-items: stretch; */
+
+
+
+            grid-auto-rows: 150px;
+            /* grid-auto-rows: minmax(100px, auto); */
+            /* grid-template: 200px 200px/300px 300px 300px; */
+            /* column-gap: 20px;
+            row-gap: 15px; */
+            gap: 5px;
+        }
+
+        /* div:nth-child(even) {
+            justify-self: start;
+        }
+
+        div:nth-child(odd) {
+            align-self: center;
+        } */
+
+        div:nth-child(1) {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 2/4;
+            grid-row: 1/3;
+        }
+
+
+        .container div {
+            background: coral;
+            border: 1px solid tomato;
+            border-radius: 5px;
+            padding: 5px;
+            color: white;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Ячейка 1</div>
+        <div>Ячейка 2</div>
+        <div>Ячейка 3</div>
+        <div>Ячейка 4</div>
+        <div>Ячейка 5</div>
+        <div>Ячейка 6</div>
+        <div>Ячейка 7</div>
+        <div>Ячейка 8</div>
+        <div>Ячейка 9</div>
+    </div>
+</body>
+</html>

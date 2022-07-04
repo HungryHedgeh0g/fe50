@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 940px;
+            margin: auto;
+            display: grid;
+            grid-auto-rows: minmax(150px, auto);
+            gap: 5px;
+            grid-template-areas: 
+                'a'
+                'b'
+                'c'
+                'd'
+                'e'
+                'f';
+        }
+
+        #a {
+            grid-area: a;
+        }
+
+        #b {
+            grid-area: b;
+        }
+
+        #c {
+            grid-area: c;
+        }
+
+        #d {
+            grid-area: d;
+        }
+
+        #e {
+            grid-area: e;
+        }
+
+        #f {
+            grid-area: f;
+        }
+
+        h3,
+        p {
+            color: #fff;
+            text-shadow: 0 0 10px black,0 0 20px black,0 0 30px black,0 0 40px black;
+        }
+
+        h3 {
+            margin: 20px 10px 5px 10px;
+        }
+
+        p {
+            margin: 5px 10px 5px 10px;
+        }
+
+        .container div {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+
+        #b h3,
+        #c h3 {
+            margin-top: auto;
+        }
+
+        button {
+            padding: 5px;
+            margin: auto 10px 20px 10px;
+        }
+
+
+        @media (min-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: minmax(200px, auto) minmax(200px, auto);
+                grid-auto-rows: minmax(200px, auto);
+                grid-template-areas:
+                    'a a' 
+                    'a a'
+                    'b d'
+                    'b e'
+                    'b f'
+                    'c f';
+            }
+        }
+
+        @media (min-width: 800px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: minmax(150px, auto) minmax(150px, auto);
+                grid-auto-rows: minmax(100px, auto);
+                grid-template-areas: 
+                    'a b d'
+                    'a b e'
+                    'a b f'
+                    'a c f'
+                    'a c f';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="a" style="background:url(./img/01.jpg) no-repeat; background-size: cover;">
+            <h3>Нам нравятся гоночные машины</h3>
+            <p>Здесь вы можете найти много интересного, связанного с гоночными машинами.</p>
+        </div>
+        <div id="b"
+            style="background: linear-gradient(#00000000, #000000e7), url(./img/02.jpg) no-repeat; background-size: cover;">
+            <h3>Необычные формы</h3>
+            <p>Почему некоторые из них так необычно выглядят?</p>
+        </div>
+        <div id="c"
+            style="background: linear-gradient(#00000000, #000000e7), url(./img/03.jpg) no-repeat; background-size: cover;">
+            <h3>Интересные вещи, которые вы обнаружите, когда управляете гоночной машиной</h3>
+        </div>
+        <div id="d"
+            style="background: linear-gradient(#00000000, #000000e7), url(./img/04.jpg) no-repeat; background-size: cover;">
+            <h3>Как управление зависит от дорожных и погодных условий</h3>
+            <p>О выборе стиля вождения</p>
+        </div>
+        <div id="e" style="background:url(./img/05.jpg) no-repeat; background-size: cover;">
+            <h3>Фото гоночных машин</h3>
+            <p>Красота, от которой трудно оторваться</p>
+        </div>
+        <div id="f" style="background-color:brown;">
+            <p>Зарегистрируйтесь не откладывая</p>
+            <button>Зарегистрироваться!</button>
+        </div>
+    </div>
+</body>
+
+</html>

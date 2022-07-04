@@ -1,0 +1,23 @@
+body {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+#picturesHere {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#bigPicture {
+    margin-top: 15px;
+}
+
+#bigPicture p {
+    font-size: 18pt;
+    text-align: center;
+}
+
+img {
+    cursor: pointer;
+}

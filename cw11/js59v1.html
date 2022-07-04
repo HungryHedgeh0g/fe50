@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style id="stl">
+        body {
+            animation: a1 2s;
+        }
+
+        @keyframes a1 {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        section {
+            width: 500px;
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div {
+            width: 110px;
+            padding: 3px;
+            border: 1px solid #f00;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #pic {
+            transition: .5s;
+        }
+
+        .buttonOn {
+            background: #00f;
+            color: #fff;
+        }
+
+        .buttonOff {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div id="id1" onclick="tab(this, 'winter.jpg')">Winter</div>
+        <div id="id2" onclick="tab(this, 'spring.jpg')">Spring</div>
+        <div id="id3" onclick="tab(this, 'summer.jpg')">Summer</div>
+        <div id="id4" onclick="tab(this, 'autumn.jpg')">Autumn</div>
+    </section>
+    <section>
+        <img id="pic" src="../../images/winter.jpg" alt="">
+    </section>
+
+    <script>
+        let tab = (id, file) => {
+            menu = document.querySelectorAll("section > div");
+            for (elem of menu) {
+                elem.setAttribute("class", ".buttonOff");
+            }
+            pic.style.opacity = '0';
+            // stl.innerHTML += `
+            //         #pic {
+            //             animation: fadeOut .5s;
+            //         }
+
+            //         @keyframes fadeOut {
+            //             from {
+            //                 opacity: 1;
+            //             }
+            //             to {
+            //                 opacity: 0;
+            //             }
+            //         }
+            //     `;
+            setTimeout('changePic()', 200);
+            changePic = () => {
+                id.setAttribute("class", ".buttonOn");
+                pic.src = `../../images/${file}`;
+                pic.style.opacity = '1';
+                // stl.innerHTML += `
+                //     #pic {
+                //         animation: fadeIn .5s;
+                //     }
+
+                //     @keyframes fadeIn {
+                //         from {
+                //             opacity: 0;
+                //         }
+                //         to {
+                //             opacity: 1;
+                //         }
+                //     }
+                // `;
+            }
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
