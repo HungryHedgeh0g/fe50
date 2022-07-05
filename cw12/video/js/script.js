@@ -37,6 +37,9 @@ function zoom(event) {
 
 function level() {
     media.volume = volume.value;
+    media.muted = false;
+    mute.innerHTML = `<span class="material-symbols-outlined" title="Mute">
+        volume_up</span>`;
 }
 
 function push() {
@@ -84,11 +87,14 @@ function move(e) {
 
 function soundSwitch() {
     if (!media.muted) {
+        temp = volume.value;
         media.muted = true;
+        volume.value = 0;
         mute.innerHTML = `<span class="material-symbols-outlined" title="Unmute">
         volume_off</span>`;
     } else {
         media.muted = false;
+        volume.value = temp;
         mute.innerHTML = `<span class="material-symbols-outlined" title="Mute">
         volume_up</span>`;
     }
