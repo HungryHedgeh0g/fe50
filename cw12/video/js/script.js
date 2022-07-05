@@ -15,8 +15,24 @@ function initiate() {
     mute.addEventListener('click', soundSwitch);
     bar.addEventListener('click', move);
     volume.addEventListener('input', level);
+    volume.addEventListener('wheel', zoom);
     media.addEventListener('dblclick', openFullscreen);
 
+}
+
+function zoom(event) {
+    event.preventDefault();
+    console.log(event.deltaY);
+    if (event.deltaY > 0) {
+        // Zoom out
+        volume.value -= event.deltaY / 5000;
+        media.volume = volume.value;
+    }
+    else {
+        // Zoom in
+        volume.value -= event.deltaY / 5000;
+        media.volume = volume.value;
+    }
 }
 
 function level() {
@@ -53,11 +69,18 @@ function progressDraw() {
 function move(e) {
     console.log(e);
     let mouseX = e.layerX - bar.offsetLeft;
+    if (mouseX > progressBar) mouseX = progressBar;
     let newTime = mouseX * media.duration / progressBar;
     media.currentTime = newTime;
     progress.style.width = `${mouseX}px`;
+    if (!media.paused && !media.ended) {
+        play.innerHTML = `<span class="material-symbols-outlined" title="Pause">
+        pause_circle</span>`;
+    } else {
+        play.innerHTML = `<span class="material-symbols-outlined" title="Play">
+        play_circle</span>`;
+    }
 }
-
 
 function soundSwitch() {
     if (!media.muted) {
