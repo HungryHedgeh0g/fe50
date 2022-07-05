@@ -9,7 +9,7 @@
 </head>
 
 <body onload="func()">
-    <a id="link1" href="https://google.com"><img id="im1" src="./images/minsk1.jpg" alt=""></a>
+    <a id="link1" href="https://google.com"><img id="im1" src="../images/minsk1.jpg" alt=""></a>
 
     <script>
         to = ["https://google.com", "https://yandex.by"];
@@ -19,7 +19,7 @@
         function func() {
             if(n>max) n=1;
             link1.href = `${to[n-1]}`;
-            im1.src = `./images/minsk${n++}.jpg`;
+            im1.src = `../images/minsk${n++}.jpg`;
             
             setTimeout(func, 2000);
         }
