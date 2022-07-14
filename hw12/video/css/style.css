@@ -1,0 +1,91 @@
+#media {
+    width: 720px;
+    display: block;
+    margin: 50px auto 0;
+    border-radius: 20px;
+}
+
+nav {
+    width: 720px;
+    height: 40px;
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.464);
+    opacity: 0;
+    transition: 700ms;
+    border-radius: 20px;
+    transform: translateY(-150px);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav:hover {
+    opacity: 1;
+}
+
+#bar {
+    width: 450px;
+    height: 7px;
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+#progress {
+    width: 0px;
+    height: 7px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+#buttons {
+    width: 60px;
+    height: 25px;
+    padding-left: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+#play,
+#mute {
+    border-color: white;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+#play:hover,
+#mute:hover {
+    color: rgb(219, 19, 19);
+}
+
+#playonstop {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: -50px;
+    bottom: 250px;
+
+}
+
+#playonstop span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 100px;
+    cursor: default;
+    user-select: none;
+    opacity: 0;
+}
+
+@keyframes animPlayStop {
+    from {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.5, 1.5)
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Плеер</title>
+</head>
+
+<body>
+    <video id="media">
+        <source src="../../cw12/video/media/solarstone.mp4">
+    </video>
+
+    <div id="playonstop">
+        <span id="p" class="material-symbols-outlined">
+            play_circle</span>
+        <span id="s" class="material-symbols-outlined">
+            pause_circle</span>
+    </div>
+
+    <nav>
+        <div id="buttons">
+            <div id="play"><span class="material-symbols-outlined" title="Play">
+                    play_circle
+                </span></div>
+            <div id="mute"><span class="material-symbols-outlined" title="Mute">
+                    volume_up</span></div>
+        </div>
+        <div id="bar">
+            <div id="progress"></div>
+        </div>
+        <div id="volumeControl">
+            <input type="range" id="volume" min="0" max="1" step=".01" value=".6">
+        </div>
+    </nav>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
